@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
+import Counter from "./components/users/Counter";
 import axios from "axios";
 import "./App.css";
 import Search from "./components/users/Search";
@@ -40,6 +41,7 @@ class App extends Component {
 
 				<div className='container'>
 					<Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} />
+					<Counter />
 					<Users loading={this.state.loading} users={this.state.users} />
 				</div>
 			</div>
