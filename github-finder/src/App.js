@@ -48,7 +48,7 @@ class App extends Component {
 
 				<div className='container'>
 					<Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} />
-					{/* <Cart initialItems={items} /> */}
+					<Cart initialItems={items} />
 					<Users loading={this.state.loading} users={this.state.users} />
 				</div>
 			</div>
