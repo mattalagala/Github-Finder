@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
-import Counter from "./components/users/Counter";
+
 import axios from "axios";
 import "./App.css";
 import Search from "./components/users/Search";
+import Cart from "./components/users/Cart";
+
+const items = [
+	{ id: 1, name: "Taco Seasoning", price: 2.25, qty: 2 },
+	{ id: 2, name: "Pinto Beans", price: 1.99, qty: 3 },
+	{ id: 3, name: "Sour Cream", price: 3.5, qty: 1 },
+];
 
 class App extends Component {
 	state = {
@@ -41,7 +48,7 @@ class App extends Component {
 
 				<div className='container'>
 					<Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} />
-					<Counter />
+					<Cart initialItems={items} />
 					<Users loading={this.state.loading} users={this.state.users} />
 				</div>
 			</div>
