@@ -15,7 +15,7 @@ function Cart({ initialItems }) {
 	};
 
 	const grandTotal = items
-		.reduce((total, item) => total + item.qty * item.price, 0)
+		.reduce((ttal, item) => total + item.qty * item.price, 0)
 		.toFixed(2);
 
 	return (
